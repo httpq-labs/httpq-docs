@@ -10,7 +10,7 @@
   "repository": "https://github.com/httpq-labs/httpq-server/httpq-docs",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src && mv src/.vuepress/dist docs"
+    "build": "vuepress build src && mv src/.vuepress/dist/ docs"
   },
   "license": "MIT",
   "devDependencies": {
