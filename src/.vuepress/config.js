@@ -8,8 +8,9 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: description,
+  description: "Quickstart, guide and overview of HTTPQ, the open source webhooks sending server.",
   base: "/httpq-docs/",
+  dest: "docs",
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
@@ -27,36 +28,79 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
+    repo: 'https://github.com/httpq-labs/httpq-docs',
+    editLinks: true,
+    docsDir: 'src',
+    docsBranch: 'main',
+    editLinkText: 'edit',
+    lastUpdated: true,
+    logo: '/smologo.jpg',
     nav: [
+      {
+        text: 'Overview',
+        link: '/overview/',
+      },
+      {
+        text: 'Quick Start',
+        link: '/quickstart/',
+      },
       {
         text: 'Guide',
         link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
       }
     ],
     sidebar: {
-      '/guide/': [
+      '/overview/': [
         {
-          title: 'Guide',
+          title: 'Overview',
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'why-httpq',
+            'key-features',
+            'benchmarks'
           ]
         }
       ],
+      '/guide/': [
+        {
+          title: 'Introduction',
+          collapsable: false,
+          children: [
+            '',
+          ]
+        },
+        {
+          title: 'Getting Started',
+          collapsable: false,
+          children: [
+            'install',
+            'settings',
+            'dependencies',
+            'tenancy',
+            'auth',
+          ]
+        },
+        {
+          title: 'Designing Webhooks',
+          collapsable: false,
+          children: [
+            'api-versioning',
+            'topics',
+            'consumers',
+            'subscriptions'
+          ]
+        },
+        {
+          title: 'Ops guide',
+          collapsable: false,
+          children: [
+            'high-availability',
+            'scaling-out',
+            'monitoring'
+          ]
+        }
+      ]
     }
   },
 
