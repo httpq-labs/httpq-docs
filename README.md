@@ -1,3 +1,3 @@
-Documentation site for **HTTPQ**, the webhooks sending server.
+Documentation site for [HTTPQ](https://github.com/httpq-labs/httpq-server), the webhooks sending server.
 
-https://httpq-labs.github.io/httpq-docs/
+View it at https://httpq-labs.github.io/httpq-docs/
